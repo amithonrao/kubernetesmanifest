@@ -16,7 +16,7 @@ node {
                         sh "git config user.name amithonrao"
                         //sh "git switch master"
                         sh "cat deployment.yaml"
-                        sh "git pull --rebase origin main"
+                        sh "git pull"
                         sh "sed -i 's+amithonrao/test.*+amithonrao/test:${DOCKERTAG}+g' deployment.yaml"
                         sh "cat deployment.yaml"
                         sh "git add ."
